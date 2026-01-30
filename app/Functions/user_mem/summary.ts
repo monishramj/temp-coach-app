@@ -11,7 +11,7 @@ if (!GEMINI_API_KEY) {
   throw new Error("Missing GEMINI_API_KEY environment variable");
 }
 
-async function queryGemini(prompt: string, content: string): Promise<string> {
+export async function queryGemini(prompt: string, content: string): Promise<string> {
     
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${GEMINI_API_KEY}`,

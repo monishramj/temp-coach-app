@@ -5,7 +5,7 @@ declare const Deno: {
   };
 };
 
-async function generateVector(text: string): Promise<number[]> {
+export async function generateVector(text: string): Promise<number[]> {
   const apiKey = Deno.env.get("GEMINI_API_KEY");
   if (!apiKey) {
     throw new Error("Missing GEMINI_API_KEY");
